@@ -1,46 +1,67 @@
-# Getting Started with Create React App
+# MERNTasks
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MERNTasks is a basic CRUD of projects and tasks created as an evidence of my learning using MERN architecture. Hope you find interesting and any comment or suggestion will be well received.
 
-## Available Scripts
+Guía en [español](./README.es.md) :page_facing_up:.
 
-In the project directory, you can run:
+## Main features :clipboard:
 
-### `npm start`
+* React, React-Router-DOM, Typescript (TSX), Function Components, React Hooks & Context API.
+* Axios
+* Cypress
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Production :package:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+You can see a production version of this project here: [MERNTasks](https://affectionate-hodgkin-3670a5.netlify.app/).
 
-### `npm test`
+### Notes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* **Email**: tester@email.com / **Password**: 123456
+* Limited to a maximum number of 5 users in db.
+* Limited to 10 projects in db, per user.
+* Limitet to 15 tasks in db, per project.
 
-### `npm run build`
+## Getting started :rocket:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+_This instructions allow you to generate a copy of the project running on your local machine for development and testing purposes._
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Pre-configuration :gear:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Configure the server variables and run it locally as shown in these instructions: [Server](./server/SERVER.md). 
+2. Change `REACT_APP_BACKEND_URL` variable in `.env` file with the URL where server is listening.
 
-### `npm run eject`
+## Installation :wrench:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Install all dependencies by running next command in the project directory:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Now you can run the project in development mode using:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+npm start
+```
 
-## Learn More
+By default, app will run on **http://localhost:3000**.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Testing with Cypress :hammer:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+_This project has a small **end-to-end** Test set implemented with Cypress to verify app's behavior._
+
+### Running tests
+
+1. Set the URL where the server is listening in the variable `backendUrl` in the file` testdata.json` inside directory `cypress/fixtures`.
+2. Run the following command in the project directory to display Cypress console and run any option of the Test set.
+
+```bash
+./node_modules/.bin/cypress open
+```
+
+## Built with :hammer_and_wrench:
+
+* [Create React App](https://github.com/facebook/create-react-app) - Create React apps with no build configuration.
+
+## License :page_with_curl:
+[ISC](https://opensource.org/licenses/ISC)
